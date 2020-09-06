@@ -306,33 +306,91 @@ Let A = a+b and B = a-b \
            4 \\
       \end{pmatrix}
 \end{align}
-Let C be a vector Perpendicular to A and B which can be found by the cross product of A and B\\
+Let \vec{N} be a vector Perpendicular to A and B both\\
+
+	\begin{equation}\label{eq1}
+		\vec{A}^{T}\vec{N} = 0
+	\end{equation} 
+	
+	\begin{equation}\label{eq1}
+		\vec{B}^{T}\vec{N} = 0
+	\end{equation} 
+			
+The augumented matrix can be represented as follows:\\
+    \begin{align}
+		\myvec{
+			4 & 4 & 0 & \vrule & 0 \\
+			2 & 0 & 4 & \vrule & 0 \\
+		}
+	\end{align}
+	Using row reduction to find an expression for \vec{N}.\\
+	    \begin{align}
+		\xleftrightarrow[R_2 \leftarrow R_2-2R_1]{R_1 \leftarrow \frac{R_1}{4}}
+		\myvec{
+			1 & 1 & 0 & \vrule & 0 \\
+			0 & -2 & 4 & \vrule & 0 \\
+		}
+		\\
+		\xleftrightarrow[R_1 \leftarrow R_1-R_2]{R_2 \leftarrow \frac{R_2}{-2}}
+		\myvec{
+			1 & 0 & 2 & \vrule & 0 \\[0.2cm]
+			0 & 1 & -2 & \vrule & 0 \\[0.2cm]
+		}
+	\end{align}
+
+  \begin{align}
+\therefore \vec{N} = \begin{pmatrix}
+           n_{1}\\
+           n_{2}\\
+           n_{3}\\
+                    \end{pmatrix}
+	\end{align}
+
+From above equations we get,
 
 \begin{align}
-C = A\times B
+n_{1} + 2(n_{3}) = 0
 \end{align}
-
+\begin{align}
+n_{2} - 2(n_{3}) = 0
+\end{align}
+\begin{align}
+    \therefore n_{1} = -2(n_{3})
+\end{align}
+\begin{align}
+    \therefore n_{2} = 2(n_{3})
+\end{align}
   \begin{align}
-    C = \begin{vmatrix}
-           i & j & k\\
-           4 & 4 & 0\\
-           2 & 0 & 4\\
-         \end{vmatrix}
+\therefore \vec{N} = \begin{pmatrix}
+           n_{1} \\
+           n_{2} \\
+           n_{3} \\
+      \end{pmatrix}=
+      n_{3} \begin{pmatrix}
+           -2 \\
+           2 \\
+           1 \\
+      \end{pmatrix}
   \end{align}
+  
+Let us consider $n_{3}$ to be -8 which gives us:
 
-  \begin{align}
-\therefore C = \begin{pmatrix}
+\begin{align}
+\therefore \vec{N} = \begin{pmatrix}
            16 \\
            -16 \\
            -8 \\
       \end{pmatrix}
-  \end{align}
+\end{align}
+
+
+  
 \begin{align}      
-\norm{{C}}=\sqrt{16^2+(-16)^2-8^2}=24\
+\norm{{N}}=\sqrt{16^2+(-16)^2-8^2}=24\
 \end{align}
 Let u be the unit vector of C which can be found as follows:\\
 \begin{align}      
-{u}=\frac{{C}}{\norm{{C}}}
+{u}=\frac{{N}}{\norm{{N}}}
 \end{align}
 Solving the above equation gives the unit vector u which is perpendicular to vectors A and B\\
 
