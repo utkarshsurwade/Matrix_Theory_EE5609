@@ -254,76 +254,71 @@ https://github.com/utkarshsurwade/Matrix_Theory_EE5609/tree/master/Assignment1
 \end{lstlisting}
 %
 \section{Problem}
- Find a unit vector perpendicular to each of the vectors a+b and a-b, where\
-\begin{align}
- a = \begin{pmatrix}
-           3 \\
-           2 \\
-           2 \\
-      \end{pmatrix},
-      b=\begin{pmatrix}
-           1 \\
-           2 \\
-           -2 \\
-      \end{pmatrix}
+ Find a unit vector perpendicular to each of the vectors $\vec{a}+\vec{b}$ and $\vec{a}-\vec{b}$, where
+ \begin{align}
+ \vec{a}= \myvec{
+			3  \\
+			2  \\
+			2  \\
+		    }
 \end{align}
-        
+\begin{align}
+\vec{b}= \myvec{
+			3  \\
+			2  \\
+			2  \\
+		   }
+\end{align}
 \section{Solution}
 \begin{flushleft}
-Let A = a+b and B = a-b \
+Let $\vec{A}=\vec{a}+\vec{b} \ and\  \vec{B}=\vec{a}-\vec{b}$
 \begin{align}
- A = \begin{pmatrix}
-           3 \\
-           2 \\
-           2 \\
-      \end{pmatrix}+
-      \begin{pmatrix}
-           1 \\
-           2 \\
-           -2 \\
-      \end{pmatrix}=
-      \begin{pmatrix}
-           4 \\
-           4 \\
-           0 \\
-      \end{pmatrix}
+\vec{A}= \myvec{
+			3  \\
+			2  \\
+			2  \\
+		   }+
+\myvec{
+			1  \\
+			2  \\
+			-2  \\
+		   }=
+\myvec{
+			4  \\
+			4  \\
+			0  \\
+		   }
 \end{align}
-
 \begin{align}
- B = \begin{pmatrix}
-           3 \\
-           2 \\
-           2 \\
-      \end{pmatrix}-
-      \begin{pmatrix}
-           1 \\
-           2 \\
-           -2 \\
-      \end{pmatrix}=
-      \begin{pmatrix}
-           2 \\
-           0 \\
-           4 \\
-      \end{pmatrix}
+\vec{B}= \myvec{
+			3  \\
+			2  \\
+			2  \\
+		   }-
+\myvec{
+			1  \\
+			2  \\
+			-2  \\
+		   }=
+\myvec{
+			2  \\
+			0  \\
+			4  \\
+		   }
 \end{align}
-Let \vec{N} be a vector Perpendicular to A and B both\\
-
-	\begin{equation}\label{eq1}
-		\vec{A}^{T}\vec{N} = 0
-	\end{equation} 
-	
-	\begin{equation}\label{eq1}
-		\vec{B}^{T}\vec{N} = 0
-	\end{equation} 
-			
-The augumented matrix can be represented as follows:\\
+Let \vec{n} be a vector Perpendicular to A and B both
+	\begin{align}\label{eq1}
+		\vec{A}^{T}\vec{n} &= 0 \\
+		\vec{B}^{T}\vec{n} &= 0
+	\end{align} 
+The augmented matrix can be represented as follows:
     \begin{align}
 		\myvec{
 			4 & 4 & 0 & \vrule & 0 \\
 			2 & 0 & 4 & \vrule & 0 \\
 		}
 	\end{align}
-	Using row reduction to find an expression for \vec{N}.\\
+	Using row reduction to find an expression for \vec{n}.
 	    \begin{align}
 		\xleftrightarrow[R_2 \leftarrow R_2-2R_1]{R_1 \leftarrow \frac{R_1}{4}}
 		\myvec{
@@ -337,66 +332,58 @@ The augumented matrix can be represented as follows:\\
 			0 & 1 & -2 & \vrule & 0 \\[0.2cm]
 		}
 	\end{align}
-
   \begin{align}
-\therefore \vec{N} = \begin{pmatrix}
+ \therefore \vec{n} = \myvec{
            n_{1}\\
            n_{2}\\
            n_{3}\\
-                    \end{pmatrix}
+		   }
 	\end{align}
-
 From above equations we get,
-
 \begin{align}
-n_{1} + 2(n_{3}) = 0
-\end{align}
-\begin{align}
-n_{2} - 2(n_{3}) = 0
-\end{align}
-\begin{align}
-    \therefore n_{1} = -2(n_{3})
-\end{align}
-\begin{align}
-    \therefore n_{2} = 2(n_{3})
+n_{1} + 2(n_{3}) &= 0\\
+n_{2} - 2(n_{3}) &= 0\\
+\therefore n_{1} &= -2(n_{3}) \\
+\therefore n_{2} &= 2(n_{3})
 \end{align}
   \begin{align}
-\therefore \vec{N} = \begin{pmatrix}
-           n_{1} \\
-           n_{2} \\
-           n_{3} \\
-      \end{pmatrix}=
-      n_{3} \begin{pmatrix}
-           -2 \\
-           2 \\
-           1 \\
-      \end{pmatrix}
-  \end{align}
-  
+ \therefore \vec{n} = \myvec{
+           n_{1}\\
+           n_{2}\\
+           n_{3}\\
+		   }=
+	n_{3} \myvec{
+           -2\\
+           2\\
+           1\\
+		   }
+	\end{align}
 Let us consider $n_{3}$ to be -8 which gives us:
-
 \begin{align}
-\therefore \vec{N} = \begin{pmatrix}
-           16 \\
-           -16 \\
-           -8 \\
-      \end{pmatrix}
-\end{align}
-
-
-  
+\therefore \vec{n} = \myvec{
+           16\\
+           -16\\
+           -8\\
+		   }
+	\end{align}
 \begin{align}      
-\norm{{N}}=\sqrt{16^2+(-16)^2-8^2}=24\
+\norm{{\vec{n}}}=\sqrt{16^2+(-16)^2-8^2}=24
 \end{align}
-Let u be the unit vector of C which can be found as follows:\\
+Let $\vec{u}$ be the unit vector of C which can be found as follows:
 \begin{align}      
-{u}=\frac{{N}}{\norm{{N}}}
+\vec{u}=\frac{{\vec{n}}}{\norm{{\vec{n}}}}
 \end{align}
-Solving the above equation gives the unit vector u which is perpendicular to vectors A and B\\
-
+Solving the above equation gives the unit vector $\vec{u}$ which is perpendicular to vectors $\vec{A} \ and \ \vec{B}$
 \begin{align}
-    \boxed{{u}=\frac{1}{{3}}\begin{pmatrix}2\\-2\\1\end{pmatrix}}
-\end{align}
+\boxed{\therefore \vec{u} = \frac{1}{3} \myvec{
+           2\\
+           -2\\
+           -1\\
+		   }}
+	\end{align}
+%\begin{align}
+%    \boxed{{u}=\frac{1}{{3}}\begin{pmatrix}2\\-2\\1\end{pmatrix}}
+%\end{align}
 
 \end{flushleft}
 \end{document}
