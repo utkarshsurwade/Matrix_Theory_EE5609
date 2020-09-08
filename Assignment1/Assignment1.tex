@@ -256,58 +256,22 @@ https://github.com/utkarshsurwade/Matrix_Theory_EE5609/tree/master/Assignment1
 \section{Problem}
  Find a unit vector perpendicular to each of the vectors $\vec{a}+\vec{b}$ and $\vec{a}-\vec{b}$, where
  \begin{align}
- \vec{a}= \myvec{
-			3  \\
-			2  \\
-			2  \\
-		    }
+ \vec{a}= \myvec{3\\2\\2\\}
 \end{align}
 \begin{align}
-\vec{b}= \myvec{
-			3  \\
-			2  \\
-			2  \\
-		   }
+\vec{b}= \myvec{3\\2\\2\\}
 \end{align}
 \section{Solution}
 \begin{flushleft}
 Let $\vec{A}=\vec{a}+\vec{b} \ and\  \vec{B}=\vec{a}-\vec{b}$
 \begin{align}
-\vec{A}= \myvec{
-			3  \\
-			2  \\
-			2  \\
-		   }+
-\myvec{
-			1  \\
-			2  \\
-			-2  \\
-		   }=
-\myvec{
-			4  \\
-			4  \\
-			0  \\
-		   }
+\vec{A} = \myvec{3\\2\\2\\} + \myvec{1\\2\\-2\\} = \myvec{4\\4\\0\\}
 \end{align}
 \begin{align}
-\vec{B}= \myvec{
-			3  \\
-			2  \\
-			2  \\
-		   }-
-\myvec{
-			1  \\
-			2  \\
-			-2  \\
-		   }=
-\myvec{
-			2  \\
-			0  \\
-			4  \\
-		   }
+\vec{B} = \myvec{3\\2\\2\\} - \myvec{1\\2\\-2\\}=\myvec{2\\0\\4\\}
 \end{align}
-Let \vec{n} be a vector Perpendicular to A and B both
-	\begin{align}\label{eq1}
+Let $\vec{n}$ be a vector Perpendicular to $\vec{A}$ and $\vec{B}$ both
+	\begin{align}
 		\vec{A}^{T}\vec{n} &= 0 \\
 		\vec{B}^{T}\vec{n} &= 0
 	\end{align} 
@@ -347,7 +311,7 @@ Let us consider $n_{3}$ to be 1 which gives us:
 \begin{align}      
 \norm{{\vec{n}}}=\sqrt{(-2)^2+2^2+1^2}=3
 \end{align}
-Let $\vec{u}$ be the unit vector of C which can be found as follows:
+Let $\vec{u}$ be the unit vector of $\vec{n}$ which can be found as follows:
 \begin{align}      
 \vec{u}=\frac{{\vec{n}}}{\norm{{\vec{n}}}}
 \end{align}
