@@ -13,10 +13,10 @@ B = np.subtract(a,b)
 # can be found by their cross product
 # C = A*B
 
-C = np.cross(A,B)
+n = np.cross(A,B)
 
-# unit vector of C is as follows
-# np.linalg.norm(C) gives the magnitude of C
+# unit vector of n is as follows
+# np.linalg.norm(n) gives the magnitude of n
 
-unit_vec_C=C/np.linalg.norm(C)
-print(unit_vec_C)
+unit_vec_n=n/np.linalg.norm(n)
+print(unit_vec_n)
