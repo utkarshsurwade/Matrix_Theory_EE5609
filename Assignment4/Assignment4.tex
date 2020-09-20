@@ -191,36 +191,33 @@
 \caption{Isosceles Triangle with mid-points E and F on equal sides}
 \label{myfig}
 \end{figure}
-Let $\theta$ be the angle opposite to equal sides.
+According to figure:
 \begin{align}
-\cos(\theta) = \frac{\vec{(A-B)}^T\vec{(B-C)}}{\norm{\vec{A-B}}\norm{\vec{B-C}}}\\
-\cos(\theta) = \frac{\vec{(A-C)}^T\vec{(B-C)}}{\norm{\vec{A-B}}\norm{\vec{B-C}}}
+\vec{(A-B)}+\vec{(B-F)} &= \vec{(A-F)}\\
+\therefore \vec{(A-B)} &= \vec{(A-F)}-\vec{(B-F)}\\
+\therefore \vec{(A-B)} &= \frac{1}{2}\vec{(A-C)}-\vec{(B-F)}
 \end{align}
-From above equations:
+similarly,
 \begin{align}
-\vec{(A-B)}^T\vec{(B-C)}=\vec{(A-C)}^T\vec{(B-C)}
+\vec{(A-C)}+\vec{(C-E)} &= \vec{(A-E)}\\
+\therefore \vec{(A-C)} &= \vec{(A-E)}-\vec{(C-E)}\\
+\therefore \vec{(A-C)} &= \frac{1}{2}\vec{(A-B)}-\vec{(C-E)}
 \end{align}
+Since AB = AC\\
+$\therefore (AB)^2 = (AC)^2$\\
 Solving LHS:
 \begin{align}
-\vec{(A-E+E-C+C-B)}^T\vec{(B-C)}\\
-\vec{(A-E)}^T\vec{(B-C)+(E-C)}^T\vec{(B-C)+\norm{B-C}}^2
+\therefore \vec{(A-B)}^2\\
+(\frac{1}{2}\vec{(A-C)}-\vec{(B-F)})^2\\
+\frac{1}{4}\vec{(A-C)}^2+\vec{(B-F)}^2-(\vec{A-C})^T(\vec{B-F})
 \end{align}
 Solving RHS:
 \begin{align}
-\vec{(A-F+F-B+B-C)}^T\vec{(B-C)}\\
-\vec{(A-F)}^T\vec{(B-C)+(F-B)}^T\vec{(B-C)+\norm{B-C}}^2
+\therefore \vec{(A-C)}^2\\
+(\frac{1}{2}\vec{(A-B)}-\vec{(C-E)})^2\\
+\frac{1}{4}\vec{(A-B)}^2+\vec{(C-E)}^2-(\vec{A-B})^T(\vec{C-E})
 \end{align}
-From LHS and RHS
-\begin{align}
-\vec{(E-C)}^T\vec{(B-C)} &= \vec{(F-B)}^T\vec{(B-C)}\\
-\vec{(E-C)}^T\vec{(B-E+E-C)} &= \vec{(F-B)}^T\vec{(B-F+F-C)}\\
-\vec{(E-C)}^T\vec{(B-E)+\norm{E-C}}^2 &= \vec{(F-B)}^T\vec{(F-C)+\norm{B-F}}^2
-\end{align}
-Since AB = AC
-\begin{align}
-\vec{(E-C)}^T\vec{(B-E)} &= \vec{(F-B)}^T\vec{(F-C)} = 0\\
-\therefore \norm{\vec{E-C}}^2 &= \norm{\vec{B-F}}^2\\
-\therefore \norm{\vec{E-C}} &= \norm{\vec{B-F}}
-\end{align}
+Comparing LHS AND RHS
+$$\norm{\vec{B-F}} = \norm{\vec{C-E}}$$
 Hence, BF is equal to CE
  \end{document}
