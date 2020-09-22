@@ -208,14 +208,22 @@ $\therefore (AB)^2 = (AC)^2$\\
 Solving LHS:
 \begin{align}
 \therefore \norm{\vec{(A-B)}}^2\\
+\norm{\frac{1}{2}\vec{(A-C)}-\vec{(B-F)}}^2\\
 \frac{1}{4}\norm{\vec{(A-C)}}^2+\norm{\vec{(B-F)}}^2-(\vec{A-C})^T(\vec{B-F})
 \end{align}
 Solving RHS:
 \begin{align}
 \therefore \norm{\vec{(A-C)}}^2\\
+\norm{\frac{1}{2}\vec{(A-B)}-\vec{(C-E)}}^2\\
 \frac{1}{4}\norm{\vec{(A-B)}}^2+\norm{\vec{(C-E)}}^2-(\vec{A-B})^T(\vec{C-E})
 \end{align}
-Comparing LHS AND RHS
-$$\norm{\vec{B-F}} = \norm{\vec{C-E}}$$
+Comparing LHS AND RHS\\
+Since AB=AC
+\begin{align}
+\frac{1}{4}\norm{\vec{(A-C)}}^2 &= \frac{1}{4}\norm{\vec{(A-B)}}^2\\
+(\vec{A-C})^T(\vec{B-F}) &= (\vec{A-B})^T(\vec{C-E}) = 0\\
+\norm{\vec{B-F}}^2 &= \norm{\vec{C-E}}^2\\
+\therefore\norm{\vec{B-F}} &= \norm{\vec{C-E}}
+\end{align}
 Hence, BF is equal to CE
  \end{document}
