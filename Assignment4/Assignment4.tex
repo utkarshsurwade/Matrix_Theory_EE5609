@@ -194,35 +194,27 @@
 According to figure:
 \begin{align}
 \vec{(A-B)}+\vec{(B-F)} &= \vec{(A-F)}\\
-\therefore \vec{(A-B)} &= \vec{(A-F)}-\vec{(B-F)}\\
-\therefore \vec{(A-B)} &= \frac{1}{2}\vec{(A-C)}-\vec{(B-F)}
+\therefore \vec{(B-F)} &= \vec{(A-F)}-\vec{(A-B)}\\
+\therefore \vec{(B-F)} &= \frac{1}{2}\vec{(A-C)}-\vec{(A-B)}
 \end{align}
 similarly,
 \begin{align}
 \vec{(A-C)}+\vec{(C-E)} &= \vec{(A-E)}\\
-\therefore \vec{(A-C)} &= \vec{(A-E)}-\vec{(C-E)}\\
-\therefore \vec{(A-C)} &= \frac{1}{2}\vec{(A-B)}-\vec{(C-E)}
+\therefore \vec{(C-E)} &= \vec{(A-E)}-\vec{(A-C)}\\
+\therefore \vec{(C-E)} &= \frac{1}{2}\vec{(A-B)}-\vec{(A-C)}
 \end{align}
 Since AB = AC\\
 $\therefore (AB)^2 = (AC)^2$\\
-Solving LHS:
 \begin{align}
-\therefore \norm{\vec{(A-B)}}^2\\
-\norm{\frac{1}{2}\vec{(A-C)}-\vec{(B-F)}}^2\\
-\frac{1}{4}\norm{\vec{(A-C)}}^2+\norm{\vec{(B-F)}}^2-(\vec{A-C})^T(\vec{B-F})
+\therefore\vec{(A-B)}^2 = \vec{(A-C)}^2
 \end{align}
-Solving RHS:
+\begin{multline}
+\vec{(A-B)}^2+\frac{1}{4}\vec{(A-C)}^2 -\vec{(A-C)}^T\vec{(A-B)} =\\
+\vec{(A-C)}^2+\frac{1}{4}\vec{(A-B)}^2 -\vec{(A-B)}^T\vec{(A-C)}
+\end{multline}
 \begin{align}
-\therefore \norm{\vec{(A-C)}}^2\\
-\norm{\frac{1}{2}\vec{(A-B)}-\vec{(C-E)}}^2\\
-\frac{1}{4}\norm{\vec{(A-B)}}^2+\norm{\vec{(C-E)}}^2-(\vec{A-B})^T(\vec{C-E})
-\end{align}
-Comparing LHS AND RHS\\
-Since AB=AC
-\begin{align}
-\frac{1}{4}\norm{\vec{(A-C)}}^2 &= \frac{1}{4}\norm{\vec{(A-B)}}^2\\
-(\vec{A-C})^T(\vec{B-F}) &= (\vec{A-B})^T(\vec{C-E}) = 0\\
-\norm{\vec{B-F}}^2 &= \norm{\vec{C-E}}^2\\
+(\frac{1}{2}\vec{(A-C)}-\vec{(A-B)})^2 &= (\frac{1}{2}\vec{(A-B)}-\vec{(A-C)})^2\\
+\vec{(B-F)}^2 &= \vec{(C-E)}^2\\
 \therefore\norm{\vec{B-F}} &= \norm{\vec{C-E}}
 \end{align}
 Hence, BF is equal to CE
