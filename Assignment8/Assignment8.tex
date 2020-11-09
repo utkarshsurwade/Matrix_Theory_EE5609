@@ -1,0 +1,409 @@
+
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{iithtlc}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+
+\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Matrix Theory (EE5609) Assignment 8}
+\author{Utkarsh Shashikant Surwade}
+%\title{
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+%\author{<-this % stops a space
+%\thanks{}}
+%}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+% make the title area
+\maketitle
+\newpage
+%\tableofcontents
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+\begin{abstract}
+This document contains the solution SVD problem
+\end{abstract}
+Download all python codes from 
+%
+\begin{lstlisting}
+https://github.com/utkarshsurwade/Matrix_Theory_EE5609/tree/master/codes
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/utkarshsurwade/Matrix_Theory_EE5609/tree/master/Assignment8
+\end{lstlisting}
+%
+
+ \section{\textbf{Problem}}
+ Find the foot of the perpendicular to the plane
+\begin{align}
+6x-2y-3z+2 = 0 \label{eq:equation}
+\end{align}
+from the point $\myvec{1\\3\\0}$ using SVD
+
+  \section{\textbf{Solution}}
+  
+  
+  
+  The given plane equation is
+\begin{align}
+\myvec{6&-2&-3}\vec{x} = 0\label{eq:genform}
+\end{align}
+The equation of plane is
+\begin{align}
+\vec{n}^T\vec{x} = c
+\end{align}
+Hence the normal vector $\vec{n}$ is,
+\begin{align}
+\vec{n} = \myvec{6\\-2\\-3}
+\end{align}
+Let, the normal vectors $\vec{m_1}$ and $\vec{m_2}$ to the normal vector $\vec{n}$ be, 
+\begin{align}
+\vec{m} = \myvec{a\\b\\c}\\
+\mbox{then, } \vec{m}^T\vec{n} = 0\\
+\implies \myvec{a&b&c}\myvec{6\\-2\\-3} = 0
+\end{align}  
+Let, a=1 and b=0 we get,
+\begin{align}
+\vec{m_1} = \myvec{1\\0\\2}
+\end{align}
+Let, a=0 and b=1,
+\begin{align}
+\vec{m_2} = \myvec{0\\1\\-\frac{2}{3}}
+\end{align}
+Now solving the equation,
+\begin{align}
+\vec{Mx} = \vec{b}
+\label{eq:SVD_M}
+\end{align}
+Where,
+\begin{align}
+\vec{M} = \myvec{1&0\\0&1\\2&-\frac{2}{3}} , & \vec{b} = \myvec{1\\3\\0}\label{eq:b}
+\end{align}
+To solve \eqref{eq:SVD_M} we perform singular value decomposition on M given by, 
+\begin{align}
+\vec{M} = \vec{US}\vec{V}^T
+\label{eq:SVD}
+\end{align}
+substituting the value of $\vec{M}$ from equation \eqref{eq:SVD} to \eqref{eq:SVD_M},
+\begin{align}
+\implies \vec{US}\vec{V}^T\vec{x} = \vec{b}\\
+\implies \vec{x} = \vec{VS}_+\vec{U}^T\vec{b} \label{eq:x}
+\end{align}
+where, $\vec{S}_+$ is Moore-Pen-rose Pseudo-Inverse of $\vec{S}$.\\
+Columns of $\vec{U}$ are eigenvectors of $\vec{MM}^T$, columns of $\vec{V}$ are eigenvectors of $\vec{M}^T\vec{M}$ and $\vec{S}$ is diagonal matrix of singular value of eigenvalues of $\vec{M}^T\vec{M}$.\\
+Calculating the eigenvectors for $\vec{M}^T\vec{M}$.
+\begin{align}
+\vec{M}^T\vec{M} =  \myvec{1&0&2\\0&1&-\frac{2}{3}} \myvec{1&0\\0&1\\2&-\frac{2}{3}} = \myvec{5&-\frac{4}{3}\\-\frac{4}{3}&\frac{13}{9}}
+\end{align}
+Eigenvalues corresponding to $\vec{M}^T\vec{M}$  is,
+\begin{align}
+\mydet{\vec{M}^T\vec{M}-\lambda\vec{I}} = 0\\
+\implies \myvec{5-\lambda&-\frac{4}{3}\\-\frac{4}{3}&\frac{13}{9}-\lambda}\\
+\implies (\lambda-\frac{49}{9})(\lambda-1) = 0\\
+\therefore \lambda_1 = \frac{49}{9}, \lambda_2 = 1, \label{eq:lambda2}
+\end{align} 
+Hence the eigenvectors corresponding to $\lambda_1$ and $\lambda_2$ respectively is,
+\begin{align}
+\vec{v_1} =\myvec{-3\\1}, \vec{v_2} =\myvec{\frac{1}{3}\\1}
+\end{align}
+Normalizing the eigenvectors we get,
+\begin{align}
+\vec{v_1} = \frac{1}{\sqrt{10}}\myvec{-3\\1}\\
+\vec{v_2} = \frac{1}{\sqrt{10}}\myvec{1\\3}\\
+\implies \vec{V} = \frac{1}{\sqrt{10}}\myvec{-3&1\\1&3}\label{eq:V}
+\end{align}
+Now calculating the eigenvectors corresponding to $\vec{MM}^T$
+\begin{align}
+\vec{MM}^T = \myvec{1&0\\0&1\\2&-\frac{2}{3}}\myvec{1&0&2\\0&1&-\frac{2}{3}} \\\implies \myvec{1&0&2\\0&1&-\frac{2}{3}\\2&-\frac{2}{3}&\frac{40}{9}}
+\end{align}
+Eigenvalues corresponding to $\vec{M}\vec{M}^T$  is,
+\begin{align}
+\mydet{\vec{M}\vec{M}^T-\lambda\vec{I}} = 0\\
+\implies \myvec{1-\lambda&0&2\\0&1-\lambda&-\frac{2}{3}\\2&-\frac{2}{3}&\frac{40}{9}-\lambda}\\
+\implies \lambda(\lambda-1)(\lambda-\frac{49}{9}) = 0\\
+\therefore \lambda_3 = \frac{49}{9}, \lambda_4 = 1, \lambda_5 = 0\label{eq:lambda5}
+\end{align} 
+Hence the eigenvectors corresponding to $\lambda_3$, $\lambda_4$ and  $\lambda_5$ respectively is,
+\begin{align}
+\vec{v_3} =\myvec{\frac{9}{20}\\\frac{-3}{20}\\1},
+\vec{v_4} =\myvec{\frac{1}{3}\\1\\0},
+\vec{v_5} = \myvec{-2\\\frac{2}{3}\\1}
+\end{align}
+Normalizing the eigenvectors we get,
+\begin{align}
+\vec{v_3} = \myvec{\frac{9}{\sqrt{490}}\\\frac{-3}{\sqrt{490}}\\\frac{20}{\sqrt{490}}}\\
+\vec{v_4} = \myvec{\frac{1}{\sqrt{10}}\\\frac{3}{\sqrt{10}}\\0}\\
+\vec{v_5} = \myvec{\frac{-6}{7}\\\frac{2}{7}\\\frac{3}{7}}\\
+\implies \vec{U} = \myvec{\frac{9}{\sqrt{490}} &\frac{1}{\sqrt{10}} & \frac{-6}{7}\\\frac{-3}{\sqrt{490}} &\frac{3}{\sqrt{10}} &\frac{2}{7} \\\frac{20}{\sqrt{490}}&0& \frac{3}{7}} \label{eq:U}
+\end{align} 
+Now $\vec{S}$ corresponding to eigenvalues $\lambda_3$, $\lambda_4$ and  $\lambda_5$ is as follows,
+\begin{align}
+\vec{S} = \myvec{\sqrt{\frac{49}{9}}&0\\0&1\\0&0}
+\end{align}
+Now, Moore-Penrose Pseudo inverse of $\vec{S}$ is given by,
+\begin{align}
+\vec{S}_+ = \myvec{\frac{3}{7}&0&0\\0&1&0}\label{eq:S+}
+\end{align}
+Hence we get singular value decomposition of $\vec{M}$ as,
+\begin{align}
+\vec{M} = \frac{1}{\sqrt{10}}\myvec{\frac{9}{\sqrt{490}} &\frac{1}{\sqrt{10}} & \frac{-6}{7}\\\frac{-3}{\sqrt{490}} &\frac{3}{\sqrt{10}} &\frac{2}{7} \\\frac{20}{\sqrt{490}}&0& \frac{3}{7}}\myvec{\sqrt{\frac{49}{9}}&0\\0&1\\0&0}\myvec{-3&1\\1&3}^T
+\end{align}
+Now substituting the values of \eqref{eq:V}, \eqref{eq:S+}, \eqref{eq:U} and \eqref{eq:b} in \eqref{eq:x},
+\begin{align}
+\vec{U}^T\vec{b} =
+\myvec{\frac{9}{\sqrt{490}} &\frac{1}{\sqrt{10}} & \frac{-6}{7}\\\frac{-3}{\sqrt{490}} &\frac{3}{\sqrt{10}} &\frac{2}{7} \\\frac{20}{\sqrt{490}}&0& \frac{3}{7}}^T
+\myvec{1\\3\\0}\\
+\implies \vec{U}^T\vec{b} = \myvec{0\\\sqrt{10}\\0}\label{eq:Utb}
+\end{align}
+\begin{align}
+\vec{S}_+\vec{U}^T\vec{b} = \myvec{\frac{3}{7}&0&0\\0&1&0}\myvec{0\\ \sqrt{10}\\0}\\
+\implies \vec{S}_+\vec{U}^T\vec{b} = \myvec{0\\ \sqrt{10}}\label{eq:SUtb}
+\end{align}
+\begin{align}
+\vec{V}\vec{S}_+\vec{U}^T\vec{b} = \frac{1}{\sqrt{10}}\myvec{-3&1\\1&3}\myvec{0\\ \sqrt{10}}\\
+\implies \vec{V}\vec{S}_+\vec{U}^T\vec{b} = \myvec{1\\3}
+\end{align}
+$\therefore$ from equation \eqref{eq:x},
+\begin{align}
+\vec{x} = \myvec{1 \\ 3 } \label{eq:x_svd}
+\end{align}
+Verifying the solution using,
+\begin{align}
+\vec{M}^T\vec{Mx} = \vec{M}^T\vec{b}
+\end{align}
+\begin{align}
+\implies \myvec{1&0&2\\0&1&\frac{-2}{3}} \myvec{1&0\\0&1\\1&\frac{-2}{3}} \vec{x} = \myvec{1&0&2\\0&1&\frac{-2}{3}}\myvec{1\\3\\0}\\
+\implies \myvec{5&\frac{-4}{3}\\\frac{-4}{3}&\frac{13}{9}}\vec{x} = \myvec{1\\3}
+\end{align}
+Solving the augmented matrix we get,
+\begin{align}
+\myvec{5&\frac{-4}{3}&1\\\frac{-4}{3}&\frac{13}{9}&3}\xleftrightarrow[]{R_1\leftarrow\frac{R_1}{5}}\myvec{1 &\frac{-4}{15}&\frac{1}{5}\\\frac{-4}{3}&\frac{13}{9}&3}\\
+\xleftrightarrow[]{R_2\leftarrow R_2+\frac{4}{3}R_1}\myvec{1&\frac{-4}{15}&\frac{1}{5}\\0&\frac{49}{45}&\frac{49}{15}}\\
+\xleftrightarrow[]{R_2\leftarrow \frac{45}{49}R_2}\myvec{1&\frac{-4}{15}&\frac{1}{5}\\0&1&3}\\
+\xleftrightarrow[]{R_1\leftarrow R_1+\frac{4}{15}R_2}\myvec{1&0&1\\0&1&3}\\
+\implies \vec{x} = \myvec{1\\3 }\label{eq:x_rref}
+\end{align}
+Hence from equations \eqref{eq:x_svd} and \eqref{eq:x_rref} we conclude that the solution is verified.
+\end{document}
