@@ -263,56 +263,95 @@ conclude that\\
  4. $\vec{A}$ has at least one positive eigenvalue 
 %Consider $\vec{A}$ as a real symmetric matrix and show that all eigenvalues of $\vec{A}$ are real
 \section{\textbf{Solution}}
-1.\\
-Let us consider $\vec{A}$ as follows:
-\begin{align}
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Options & Solutions\\
+\hline
+&\\
+1.&Let us consider $\vec{A}$ as follows:\\
+&\parbox{6cm}{\begin{align}
 \vec{A}&=\myvec{1&1\\1&1}
-\end{align}
-Eigenvalues corresponding to $\vec{A}$ are,
-\begin{align}
+\end{align}}\\
+&Eigenvalues corresponding to $\vec{A}$ are,\\
+&\parbox{6cm}{\begin{align}
 \mydet{\vec{A}-\lambda\vec{I}}&=0\\
 \implies \myvec{1-\lambda&1\\1&1-\lambda}&=0\\
 \implies \lambda(\lambda-2)&=0\\
 \therefore \lambda_1=0,\lambda_2&=2
-\end{align}
-Therefore symmetric matrix $\vec{A}$ can have 0 as an eighenvalue.\\
-2.\\
-Let $\vec{v}$ be an eigenvector with respect to eigenvalue  $\lambda$ for matrix $\vec{A}$ where $\vec{v}$ $\neq$ 0 and
-\begin{align}
+\end{align}}\\
+&Therefore symmetric matrix\\
+&$\vec{A}$ can have 0 as an eighenvalue.\\
+&\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+&\\
+2.&Let $\vec{v}$ be an eigenvector with respect\\ &to eigenvalue  $\lambda$ for matrix $\vec{A}$\\ &where $\vec{v}$ $\neq$ 0 and\\
+&\parbox{6cm}{\begin{align}
 \vec{A}\vec{v}&=\lambda\vec{v}\\
 \implies \vec{v}^H\vec{A}\vec{v}=\vec{v}^H(\lambda\vec{v})&=\lambda\vec{v}^H\vec{v}
-\end{align}
-where H denotes Hermitian conjugation.\\
-Taking Hermitian transpose, we get
-\begin{align}
+\end{align}}\\
+&where H denotes Hermitian conjugation.\\
+&Taking Hermitian transpose, we get\\
+&\parbox{6cm}{\begin{align}
 (\lambda\vec{v}^H\vec{v})^H&=(\vec{v}^H\vec{A}\vec{v})^H\\
 \therefore \overline{\lambda}\vec{v}^H\vec{v}=\vec{v}^H\vec{A}^H\vec{v}&=\vec{v}^H\vec{A}\vec{v}\\
 \therefore (\lambda - \overline{\lambda})\vec{v}^H\vec{v}&=0\\
 \mbox{since } \vec{v} \neq 0, \ \therefore \lambda - \overline{\lambda}&=0\\
 \therefore \lambda &= \overline{\lambda} \mbox{ is real}
-\end{align}
-Hence eigenvalues of a Hermitian matrix(in particular real symmetric matrix) are real.\\
-3.\\
-\begin{align}
+\label{eq:real_eigenvalues}
+\end{align}}\\
+& Hence eigenvalues of a Hermitian matrix\\
+&(in particular real symmetric matrix) are real.\\
+&\\
+\hline
+3&\parbox{6cm}{\begin{align}
 \mbox{Since } \vec{A}^{-1}\vec{A}&=\vec{I}\\ 
 \therefore (\vec{A}^{-1}\vec{A})^T&=\vec{I}^T\\
 \implies (\vec{A}^T)(\vec{A}^{-1})^T&=\vec{I}\\
 \mbox{Since } \vec{A}^T&=\vec{A}\\
 \therefore \ \vec{A}(\vec{A}^{-1})^T&=\vec{I}\\
 \therefore \ \vec{A}^{-1}&=(\vec{A}^{-1})^T
-\end{align}
-Since $\vec{A}$ is real and the inverse of a matrix is unique,therefore $\vec{A}^{-1}$ is real and symmetric.\\
-4.\\
-Let us consider $\vec{A}$ as follows:
-\begin{align}
+\label{eq:real_and_symmetric_inverse}
+\end{align}}\\
+&Since $\vec{A}$ is real and\\
+&the inverse of a matrix is unique,\\
+&therefore $\vec{A}^{-1}$ is real and symmetric.\\
+&\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+&\\
+4.&Let us consider $\vec{A}$ as follows:\\
+&\parbox{6cm}{\begin{align}
 \vec{A}&=\myvec{-6&2\\2&-9}
-\end{align}
-Eigenvalues corresponding to $\vec{A}$ are,
-\begin{align}
+\end{align}}\\
+&Eigenvalues corresponding to $\vec{A}$ are,\\
+&\parbox{6cm}{\begin{align}
 \mydet{\vec{A}-\lambda\vec{I}}&=0\\
 \implies \myvec{-6-\lambda&2\\2&-9-\lambda}&=0\\
 \implies (\lambda+5)(\lambda+10)&=0\\
 \therefore \lambda_1=-5,\lambda_2&=-10
-\end{align}
-Therefore symmetric mattric $\vec{A}$ can have all negative eigenvalues.
+\end{align}}\\
+&Therefore symmetric matric $\vec{A}$\\
+&can have all negative eigenvalues.\\
+&\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \end{document}
