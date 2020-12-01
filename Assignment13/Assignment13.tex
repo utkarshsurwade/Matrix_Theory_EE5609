@@ -207,13 +207,13 @@ Given&The minimum polynomial is\\
     p(x)&=x^2
 \end{align*}}\\
 &Therefore p(x) must divide characteristic polynomial.\\
-&This will be satisfied only if at least two values among e,f,d are zeros.\\
+&This will be satisfied only if the values e,f,d are zeros.\\
 &\\
 \hline
 &\\
 Characteristic polynomial&\\
-when e=0 and f=0&\parbox{6cm}{\begin{align*}
-    \mydet{x\vec{I}-\vec{A}}&=x^2(x-d)
+when e=0,f=0 and d=0&\parbox{6cm}{\begin{align*}
+    \mydet{x\vec{I}-\vec{A}}&=x^3
 \end{align*}}\\
 &\\
 \hline
@@ -221,16 +221,16 @@ when e=0 and f=0&\parbox{6cm}{\begin{align*}
 Since $p(x)=x^2$&\\
 Hence $ p(\vec{A})=\vec{A}^2=\vec{0}_{3\times3}$&Therefore calculating $p(\vec{A})$ as follows:\\
 &\parbox{6cm}{\begin{align*}
-    \myvec{0&a&b\\0&0&c\\0&0&d} \myvec{0&a&b\\0&0&c\\0&0&d}&=\vec{0}_{3\times3}\\
-    \myvec{0&0&ac+bd\\0&0&dc\\0&0&d^2}&=\vec{0}_{3\times3}
+    \myvec{0&a&b\\0&0&c\\0&0&0} \myvec{0&a&b\\0&0&c\\0&0&0}&=\vec{0}_{3\times3}\\
+    \myvec{0&0&ac\\0&0&0\\0&0&0}&=\vec{0}_{3\times3}
 \end{align*}}\\
 &\\
 \hline
 \pagebreak
 \hline
 &\\
-&For $\vec{A}^2$ to be a zero matrix, either d=0,a=0 or d=0,c=0\\
-With entries a=0,d=0,e=0,f=0&\\
+&For $\vec{A}^2$ to be a zero matrix, either a=0 or c=0\\
+With entries a=0,e=0,f=0,d=0&\\
 The matrix $\vec{A}$ will be:&\\
 For b=1,c=1&\parbox{6cm}{\begin{align*}
     \vec{A}&=\myvec{0&0&b\\0&0&c\\0&0&0}\\
