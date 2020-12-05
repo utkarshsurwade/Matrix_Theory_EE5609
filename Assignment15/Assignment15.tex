@@ -85,7 +85,8 @@ columns=fullflexible
 \newcommand{\define}{\stackrel{\triangle}{=}}
 \bibliographystyle{IEEEtran}
 \raggedbottom
-\setlength{\parindent}{0pt}
+%\setlength{\parindent}{0pt}
+\setlength\parskip{1em plus 2pt}
 \providecommand{\mbf}{\mathbf}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
@@ -206,6 +207,14 @@ Statement&Solution\\
     \mbox{Soving }\vec{A}-\vec{I}&=\myvec{0&0&0\\0&0&2\\0&0&0}\\
     \mbox{Since }\vec{A}-\vec{I}&\neq \vec{0}\\
     \mbox{Therefore, }m(x)&=(x-1)^2\\
+    \end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of two block:\\
+&one block of order 2 with principal diagonal value as $\lambda = 1$ and super\\
+&diagonal of the block (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&And one block of order 1 with $\lambda=1$.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
     \therefore \vec{J}&=\myvec{1&1&0\\0&1&0\\0&0&1}
 \end{align*}}\\
 &A matrix is diagonalizable iff its jordan form is a diagonal matrix.\\
@@ -230,6 +239,13 @@ Conclusion&Therefore the statement is false.\\
     \mbox{Soving }(\vec{A}-\vec{I})^2&=\myvec{0&0&4\\0&0&0\\0&0&0}\\
     \mbox{Since }(\vec{A}-\vec{I})^2&\neq \vec{0}\\
     \mbox{Therefore, }m(x)&=(x-1)^3\\
+\end{align*}}\\
+Justification&Hence, the Jordan form of $\vec{A}$ is a $3 \times 3$ matrix consisting of only\\
+&one block with principal diagonal values as $\lambda_1 = 1$ and super diagonal\\
+&of the matrix (i.e the set of elements that lies directly above the\\
+&elements comprising the principal diagonal) contains 1.\\
+&Hence the required Jordan form of $\vec{A}$ is,\\
+&\parbox{6cm}{\begin{align*}
     \therefore \vec{J}&=\myvec{1&1&0\\0&1&1\\0&0&1}
 \end{align*}}\\
 &Since $\vec{J}$ is not diagonizable therefore $\vec{A}$ is not diagonizable.\\
@@ -241,7 +257,7 @@ Conclusion&Therefore the statement is false.\\
 \hline
 &\\
 3.&\\
-&\parbox{6cm}{\begin{align*}
+&\parbox{10cm}{\begin{align*}
     \mbox{Give that, }p(x)\mbox{ of }\vec{A}&=(x-1)^3\\
     \mbox{Hence the eigen values of }\vec{A}&=1,1,1\\
     \mbox{Hence the eigen values of }\vec{A}^2&=1^2,1^2,1^2\mbox{ or } 1,1,1\\
