@@ -145,10 +145,10 @@ https://github.com/utkarshsurwade/Matrix_Theory_EE5609/tree/master/codes
  
 \section{\textbf{Problem}}
 Let $\vec{T}:\mathbb{R}^n \rightarrow \mathbb{R}^n$ be a linear map that satisfies $\vec{T}^2=\vec{T}-\vec{I}_{n}$. Then which of the following are true?\\
-1. $\vec{T}^3=-\vec{I}_{n}$\\
-2. $\vec{T}$ is invertible\\
-3. $\vec{T}-\vec{I}_{n}$ is not invertible\\
-4. $\vec{T}$ has a real eigen value\\
+1. $\vec{T}$ is invertible\\
+2. $\vec{T}-\vec{I}_{n}$ is not invertible\\
+3. $\vec{T}$ has a real eigen value\\
+4. $\vec{T}^3=-\vec{I}_{n}$\\
 
 \section{\textbf{Definitions}}
 \renewcommand{\thetable}{1}
@@ -199,29 +199,21 @@ Statement&Solution\\
 &Given that $\vec{T}:\mathbb{R}^n \rightarrow \mathbb{R}^n$\\
 &Since $\vec{T}$ is a linear map from $\mathbb{R}^n$ to $\mathbb{R}^n$ therefore the matrix\\
 &corresponding to it is of order $n \times n$.\\
-&\parbox{6cm}{\begin{align}
+&\parbox{6cm}{\begin{align*}
     \mbox{Since }\vec{T}^2&=\vec{T}-\vec{I}_{n}\\
-    \vec{T}^3&=\vec{T}(\vec{T}-\vec{I}_{n})\\
-    \therefore\vec{T}^3&=\vec{T}^2-\vec{T}\\
-    \therefore \vec{T}^3&=-\vec{I}_{n}\label{eq:T_cube}
-\end{align}}\\
-\hline
-&\\
-Conclusion&Therefore the statement is true.\\
-&\\
-\hline
-&\\
-2.&\\
-& From equation \eqref{eq:T_cube} ,\\
-&\\
+    \therefore\vec{T}^2-\vec{T}+\vec{I}_{n}&=\vec{0}
+\end{align*}}\\
+&$\implies p(x)=x^2-x+1$ will be annihilating polynomial.\\
+&$\therefore p(\vec{T})=\vec{T}^2-\vec{T}+\vec{I}_{n}=\vec{0}$\\
+&We know that minimal polynomial always divides annihilating polynomial.\\
+&$\therefore$ The roots of minimal polynomial are as follows:\\
 &\parbox{6cm}{\begin{align}
-\mydet{\vec{T}^3}&=\mydet{-\vec{I}_{n}}\\
-\mydet{\vec{T}}^3&=\mydet{-\vec{I}_{n}}\\
-\mydet{\vec{T}}&=\mydet{-\vec{I}_{n}}^{\frac{1}{3}}
+    x&=\frac{1\pm\sqrt{3}i}{2}\label{eq:root}
 \end{align}}\\
-&Since $\mydet{-\vec{I}_{n}}$ is non-zero, therefore its cubic root will be non-zero.\\
+&Therefore any eigenvalue of $\vec{T}$ is a root of its minimal polynomial in its field.\\
+&Since 0 is not a root of p(x), Therefore 0 is not an eigen value for $\vec{T}$.\\
+&Since $\vec{T}$ is not invertible iff there exists an eigen value which is zero.\\
 &\parbox{6cm}{\begin{align}
-    \therefore\mydet{\vec{T}}\mbox{ is non-zero}\label{eq:det_T}\\
     \therefore\vec{T}\mbox{ is invertible.}
 \end{align}}\\
 &\\
@@ -230,19 +222,28 @@ Conclusion&Therefore the statement is true.\\
 Conclusion&Therefore the statement is true.\\
 &\\
 \hline
+&\\
+2.&\\
+& From equation \eqref{eq:root} ,\\
+&We know that 1 is not an eigen value of $\vec{T}$.\\
+&Therefore, 0 is not an eigen values of  $\vec{T}-\vec{I}_{n}$.\\
+&\parbox{6cm}{\begin{align}
+    \therefore\vec{T}-\vec{I}_{n}\mbox{ is invertible.}
+\end{align}}\\
+&\\
+\hline
+&\\
+Conclusion&Therefore the statement is false.\\
+&\\
+\hline
 \pagebreak
 \hline
-3.&\\
 &\\
-&\parbox{10cm}{\begin{align}
-    \mbox{Since }\vec{T}^2&=\vec{T}-\vec{I}_{n}\\
-    \therefore\mydet{\vec{T}^2}&=\mydet{\vec{T}-\vec{I}_{n}}\\
-    \therefore\mydet{\vec{T}}^2&=\mydet{\vec{T}-\vec{I}_{n}}
-\end{align}}\\
-&Since $\mydet{\vec{T}}$ is non-zero from equation \eqref{eq:det_T}\\
-&Therefore $\mydet{\vec{T}}^2$ is non-zero.\\
-&Therefore $\mydet{\vec{T}-\vec{I}_{n}}$ is non-zero.\\
-&Therefore $\vec{T}-\vec{I}_{n}$ is Invertible.\\
+3.&\\
+& From equation \eqref{eq:root} ,\\
+&Therefore any eigenvalue of $\vec{T}$ is a root of its minimal polynomial in its field.\\
+&But the roots of minimal polynomial are not real.\\
+&Therefore $\vec{T}$ cant have a real eigen value.\\
 &\\
 \hline
 &\\
@@ -251,27 +252,16 @@ Conclusion&Therefore the statement is false.\\
 \hline
 &\\
 4.&\\
-&\parbox{6cm}{\begin{align*}
+&\parbox{6cm}{\begin{align}
     \mbox{Since }\vec{T}^2&=\vec{T}-\vec{I}_{n}\\
-    \therefore\vec{T}^2-\vec{T}+\vec{I}_{n}&=\vec{0}
-\end{align*}}\\
-&$\implies x^2-x+1$ will be annihilating polynomial.\\
-&We know that minimal polynomial always divides annihilating polynomial.\\
-&Therefore m(x) can have following values:\\
-&\parbox{6cm}{\begin{align*}
-    \mbox{Case 1: }m(x)&=x-\frac{1+\sqrt{3}i}{2}\\
-    &or\\
-    \mbox{Case 2: }m(x)&=x-\frac{1-\sqrt{3}i}{2}\\
-    &or\\
-    \mbox{Case 3: }m(x)&=x^2-x+1
-\end{align*}}\\
-&Since all the roots of minimal polynomial are the roots of\\
-&characteristic polynomial.\\
-&Therefore, for all three cases $\vec{T}$ has no real eigen values.\\
+    \vec{T}^3&=\vec{T}(\vec{T}-\vec{I}_{n})\\
+    \therefore\vec{T}^3&=\vec{T}^2-\vec{T}\\
+    \therefore \vec{T}^3&=-\vec{I}_{n}\label{eq:T_cube}
+\end{align}}\\
 &\\
 \hline
 &\\
-Conclusion&Therefore the statement is false.\\
+Conclusion&Therefore the statement is true.\\
 &\\
 \hline
 \caption{Solution summary}
