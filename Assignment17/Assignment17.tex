@@ -221,13 +221,14 @@ Example&\\
     \therefore \vec{u}\vec{u}^T&=\myvec{1&0&0\\0&0&0\\0&0&0}\\
     \mbox{Since }\vec{A}&=\vec{I}-2\vec{u}\vec{u}^T\\
     \therefore \vec{A}&=\myvec{1&0&0\\0&1&0\\0&0&1}-2\myvec{1&0&0\\0&0&0\\0&0&0}\\
-    \therefore \vec{A}&=\myvec{-1&0&0\\0&1&0\\0&0&1}\label{eq:example_of_A}\\
-    \therefore \mbox{The eigen values of }\vec{A}&=\lambda_1=1,\lambda_2=1,\lambda_3=-1\label{eq:eigen_values_of_A}
+    \therefore \vec{A}&=\myvec{-1&0&0\\0&1&0\\0&0&1}\\
+    \therefore \mbox{The eigen values of }\vec{A}&=\lambda_1=1,\lambda_2=1,\lambda_3=-1\\
+    \therefore \vec{A}^2&=\myvec{1&0&0\\0&1&0\\0&0&1}
 \end{align}}\\
 &\\
 \hline
 &\\
-Conclusion&From \eqref{eq:eigen_values_of_general_A} and \eqref{eq:eigen_values_of_A}\\
+Conclusion&From \eqref{eq:eigen_values_of_general_A}\\
 &Since $\vec{A}$ does not have 0 as an eigen value\\
 &Therefore $\vec{A}$ is not singular.\\
 &Therefore the statement is false.\\
@@ -239,7 +240,7 @@ Conclusion&From \eqref{eq:eigen_values_of_general_A} and \eqref{eq:eigen_values_
 &we know that $p(x)=x^2-x$\\
 &$\therefore$ minimal polynomial of $\vec{A}$ must divide x(x-1)\\
 &$\therefore$ possible eigenvalues of $\vec{A}$ are 0 or 1\\
-&But from \eqref{eq:eigen_values_of_general_A} and \eqref{eq:eigen_values_of_A}, we know that $\vec{A}$ has -1 as an eigen value\\
+&But from \eqref{eq:eigen_values_of_general_A} , we know that $\vec{A}$ has -1 as an eigen value\\
 &Therefore $\vec{A}^2=\vec{A}$ is false.\\
 &\\
 \hline
@@ -251,7 +252,7 @@ Conclusion&Therefore the statement is false.\\
 \hline
 &\\
 3.&\\
-& From equation \eqref{eq:eigen_values_of_general_A} and \eqref{eq:eigen_values_of_A},\\
+& From equation \eqref{eq:eigen_values_of_general_A} ,\\
 &Trace of $\vec{A}=n-2$\\
 &\\
 \hline
@@ -261,7 +262,7 @@ Conclusion&Therefore the statement is true.\\
 \hline
 &\\
 4.&\\
-&\parbox{6cm}{\begin{align*}
+&\parbox{8cm}{\begin{align*}
     \mbox{Since }\vec{A}&=\vec{I}-2\vec{u}\vec{u}^T\\
     \vec{A}^2&=(\vec{I}-2\vec{u}\vec{u}^T)(\vec{I}-2\vec{u}\vec{u}^T)\\
     \therefore\vec{A}^2&=\vec{I}-2\vec{u}\vec{u}^T-2\vec{u}\vec{u}^T+4\vec{u}\vec{u}^T\vec{u}\vec{u}^T\\
@@ -269,15 +270,6 @@ Conclusion&Therefore the statement is true.\\
     \therefore\vec{A}^2&=\vec{I}-2\vec{u}\vec{u}^T-2\vec{u}\vec{u}^T+4\vec{u}\vec{u}^T\\
     \therefore \vec{A}^2&=\vec{I}
 \end{align*}}\\
-\hline
-&\\
-Example&From \eqref{eq:example_of_A}\\
-&\parbox{6cm}{\begin{align*}
-    \mbox{Since } \vec{A}&=\myvec{-1&0&0\\0&1&0\\0&0&1}\\
-    \therefore \vec{A}^2&=\myvec{1&0&0\\0&1&0\\0&0&1}
-\end{align*}}\\
-&Therefore $\vec{A}^2=\vec{I}$ is true.\\
-&\\
 \hline
 &\\
 Conclusion&Therefore the statement is true.\\
